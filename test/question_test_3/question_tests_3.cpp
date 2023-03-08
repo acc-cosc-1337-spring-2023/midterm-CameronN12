@@ -10,3 +10,11 @@ TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
 }
+
+TEST_CASE("Test")
+{
+	for(auto i = 0; i < 10; i++)
+	{
+		CHECK(roll_dice() == 0);
+	}
+}
