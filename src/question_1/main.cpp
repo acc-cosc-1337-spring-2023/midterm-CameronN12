@@ -5,21 +5,15 @@ using std::cout; using std::cin;
 
 int main()
 {
-    int option = 0;
-    int exit = 0;
-    do
+    for(int i = 1 ; i > 0 ; i++)
     {
         int num;
         cout << "Enter sales: ";
         cin >> num;
 
         int result = get_sales_commission(num);
-        cout << "Sales of " << num<< " yields a commission of" << result<< "\n";
+        cout << "Sales of " << num<< " yields a commission of " << result<< "\n";
 
-        exit = prompt_user(option);
-
-        return 0;
     }
-    while(exit != 1);
-
+    return 0;
 }

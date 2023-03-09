@@ -33,27 +33,3 @@ double get_sales_commission(double sales)
     }
     return round(commission);
 }
-
-int prompt_user(int option)
-{
-    int exit = 0;
-    do
-    {    
-        auto choice = 'n';
-            cout<<"Want another calculation? 'y' for yes, 'n' or no: ";
-            cin>>choice;
-            if (choice == 'n' || choice == 'N')
-            {
-                cout<<"Goodbye!";
-                return 0;
-            }
-            else if (choice == 'y' || choice == 'Y')
-                return 1;
-            else
-            {
-                cout<<"Invalid option" << "\n";
-                exit = 0;
-            }
-    }
-    while (exit == 1);
-}

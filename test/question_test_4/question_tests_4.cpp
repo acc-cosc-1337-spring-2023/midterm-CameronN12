@@ -10,3 +10,8 @@ TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
 }
+
+TEST_CASE("Test")
+{
+	REQUIRE(decinaml_to_binary(10) == "00001010");
+}

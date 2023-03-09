@@ -2,4 +2,4 @@
 #include<string>
 
 bool test_config();
-string decinaml_to_binary(int value);
+std::string decinaml_to_binary(int value);
