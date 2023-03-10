@@ -11,10 +11,13 @@ TEST_CASE("test")
 	REQUIRE(test_config() == true);
 }
 
-TEST_CASE("Test")
+TEST_CASE("Test roll dice")
 {
+	int result;
 	for(auto i = 0; i < 10; i++)
 	{
-		CHECK(roll_dice() == 0);
+		result = roll_dice();
+		REQUIRE(result > 0);
+		REQUIRE(result < 7);
 	}
 }

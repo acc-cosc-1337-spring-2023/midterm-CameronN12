@@ -11,7 +11,7 @@ TEST_CASE("test")
 	REQUIRE(test_config() == true);
 }
 
-TEST_CASE("Test")
+TEST_CASE("Test get fahrenheit")
 {
 	REQUIRE(get_fahrenheit(37) == 98.6);
 	REQUIRE(get_fahrenheit(25) == 77);

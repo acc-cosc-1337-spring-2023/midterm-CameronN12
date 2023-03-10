@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+using namespace std;
 
 //
 bool test_config()
@@ -7,22 +8,27 @@ bool test_config()
     return true;
 }
 
-std::string decinaml_to_binary(int value)
+string decimal_to_binary(int value)
 {
-    if (value == 0)
+    int quotient;
+    int remainder;
+    string str_binary = "";
+    do
     {
-        return "0";
-    }
-    else if (value == 1)
-    {
-        return "1";
-    }
-    else if (value%2 == 0)
-    {
-        return decinaml_to_binary(value/2) + "0";
-    }
-    else if (value%2 == 1)
-    {
-        return decinaml_to_binary(value/2) + "1";
-    }
+        quotient = value / 2;
+        remainder = value % 2;
+        string str = to_string(remainder);
+        char ch = str[0];
+        str_binary.push_back(ch);
+        value = quotient;
+    } while (quotient != 0 || str_binary.length() < 8);
+
+    int strlength = str_binary.length();
+    string reversestr;
+    for (int i = strlength - 1; i >= 0; i--)
+   {
+      reversestr.push_back(str_binary[i]);
+   }
+    //add leading zeros
+    return reversestr;
 }
